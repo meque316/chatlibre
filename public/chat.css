@@ -118,7 +118,7 @@ footer {
 #user-panel {
     position: absolute;
     top: 10px; /* Más cerca del borde superior */
-    left: 50%;
+    left: 85%;
     transform: translateX(-50%); /* Centrar en la parte superior */
     background: rgba(170, 27, 27, 0.8); /* Hacerlo menos transparente */
     color: rgb(255, 255, 255);
@@ -129,14 +129,14 @@ footer {
     flex-direction: column;
     align-items: center;
     gap: 10px; /* Menos espacio entre elementos */
-    width: 200px; /* Reducir el ancho */
-    height: auto; /* Altura ajustable según el contenido */
+    width: 400px; /* Reducir el ancho */
+    height: 400px; /* Altura ajustable según el contenido */
 }
 
 /* Ajuste para la imagen del avatar */
 #user-panel img {
-    width: 80px !important; /* Reducir tamaño del avatar */
-    height: 80px !important;
+    width: 300px !important; /* Reducir tamaño del avatar */
+    height: 300px !important;
     border-radius: 50%;
 }
 
@@ -153,3 +153,4 @@ footer {
     cursor: pointer;
     width: 100%;
     font-size: 14px; /* Tamaño de fuente más pequeño */
+}
