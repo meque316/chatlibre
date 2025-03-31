@@ -26,7 +26,7 @@ document.getElementById('registerForm').addEventListener('submit', function(even
     
     console.log('Datos a enviar:', userData);
 
-    fetch('http://localhost:3000/register', {
+    fetch('https://chatlibre.onrender.com/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
