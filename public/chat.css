@@ -129,14 +129,14 @@ footer {
     flex-direction: column;
     align-items: center;
     gap: 10px; /* Menos espacio entre elementos */
-    width: 400px; /* Reducir el ancho */
-    height: 400px; /* Altura ajustable según el contenido */
+    width: 200px; /* Reducir el ancho */
+    height: 250px; /* Altura ajustable según el contenido */
 }
 
 /* Ajuste para la imagen del avatar */
 #user-panel img {
-    width: 300px !important; /* Reducir tamaño del avatar */
-    height: 300px !important;
+    width: 150px !important; /* Reducir tamaño del avatar */
+    height: 150px !important;
     border-radius: 50%;
 }
 
@@ -153,4 +153,42 @@ footer {
     cursor: pointer;
     width: 100%;
     font-size: 14px; /* Tamaño de fuente más pequeño */
+}
+
+/* Estilos específicos para smartphones */
+@media screen and (max-width: 600px) {
+    .container {
+        width: 600px; /* Aquí puedes poner el valor que desees en píxeles */
+        height: 3500px; /* Aquí puedes poner el valor que desees en píxeles */
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%); /* Centra el contenedor tanto vertical como horizontalmente */
+    }
+
+    #messages {
+        padding: 5px;
+    }
+
+    .message {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #message-input {
+        width: 75%;
+    }
+
+    #send-button {
+        width: 15%;
+    }
+
+    #user-panel {
+        width: 400px;
+        padding: 5px;
+    }
 }

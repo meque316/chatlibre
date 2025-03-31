@@ -36,7 +36,7 @@
             background: var(--background-light);
             transition: background 0.3s;
             position: fixed; /* Fijar la posición del contenedor */
-            top: 50px; /* Espacio de 50px desde la parte superior */
+            top: -50px; /* Espacio de 50px desde la parte superior */
             left: 0; /* Colocarlo en el lado izquierdo */
             height: calc(100vh - 100px); /* Ajustar la altura para ocupar todo el alto de la pantalla menos los márgenes */
             overflow-y: auto; /* Permitir desplazamiento vertical si hay muchos mensajes */
@@ -163,6 +163,42 @@
             height: 40px;
             border-radius: 50%;
         }
+
+        /* Estilos para smartphones */
+        @media screen and (max-width: 600px) {
+            .chat-container {
+                width: 100%; /* Ancho completo */
+                height: 100vh; /* Ocupa toda la altura */
+                margin: 0; /* Eliminar márgenes */
+                padding: 10px; /* Reducir el padding */
+                top: 0; /* Ajustar para que quede en la parte superior */
+                left: 0; /* Alinear al borde izquierdo */
+                border-radius: 0; /* Sin bordes redondeados */
+                box-shadow: none; /* Eliminar la sombra */
+            }
+
+            .messages {
+                height: 60vh; /* Ajustar la altura de los mensajes */
+                overflow-y: scroll; /* Scroll vertical si hay muchos mensajes */
+                padding: 10px; /* Espaciado dentro de los mensajes */
+            }
+
+            .input-area {
+                display: flex;
+                flex-direction: column; /* Apilar los elementos */
+                align-items: center; /* Centrar los elementos */
+                gap: 10px; /* Espaciado entre los elementos */
+            }
+
+            input {
+                width: 80%; /* Ancho del 80% de la pantalla */
+                padding: 12px; /* Asegurar que el input sea grande */
+            }
+
+            button {
+                width: 80%; /* Ancho del 80% para el botón */
+                padding: 12px; /* Ajustar el tamaño del botón */
+            }
     </style>
 </head>
 <body class="dark-mode">
