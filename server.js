@@ -1,13 +1,18 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
-const cors = require('cors');  // Asegúrate de haber instalado cors
+const cors = require('cors');  // Requiere el paquete CORS
 const app = express();
-const cors = require('cors');
-const port = process.env.PORT || 3000;  // Usa el puerto asignado por Render
+const port = 3000;
 
-// Habilitar CORS para permitir solicitudes desde el frontend
-app.use(cors());
+// Permitir solicitudes desde tu frontend (ajusta el dominio de tu frontend en Render)
+const corsOptions = {
+  origin: 'https://chatlibre.onrender.com',  // Aquí va la URL de tu frontend en Render
+  methods: 'GET,POST',  // Permitir los métodos que necesitas
+  allowedHeaders: 'Content-Type',  // Permitir cabeceras específicas si es necesario
+};
+
+app.use(cors(corsOptions));  // Aplicar CORS
 
 // Para manejar datos POST (como los datos de registro)
 app.use(express.json());  // Permite recibir datos JSON en el cuerpo de la solicitud
@@ -112,20 +117,7 @@ app.post('/sendMessage', (req, res) => {
     });
 });
 
-// Configurar CORS
-app.use(cors());  // Esto permitirá solicitudes desde cualquier origen
-
-// Para manejar datos POST (como los datos de registro)
-app.use(express.json());
-
-// Para servir archivos estáticos como el HTML, CSS y JS
-app.use(express.static('public'));
-
 // Arrancar el servidor
 app.listen(port, () => {
     console.log(`Servidor corriendo en http://localhost:${port}`);
 });
-
-
-
-
