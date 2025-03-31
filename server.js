@@ -1,9 +1,12 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
-const app = express();
 const cors = require('cors');
+const app = express();
 const port = 3000;
+
+// Habilitar CORS para todas las solicitudes
+app.use(cors());
 
 // Para manejar datos POST (como los datos de registro)
 app.use(express.json());  // Permite recibir datos JSON en el cuerpo de la solicitud
@@ -112,5 +115,6 @@ app.post('/sendMessage', (req, res) => {
 app.listen(port, () => {
     console.log(`Servidor corriendo en http://localhost:${port}`);
 });
+
 
 
