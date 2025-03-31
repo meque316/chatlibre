@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+const cors = require('cors');  // Asegúrate de haber instalado cors
 const app = express();
 const port = 3000;
 
@@ -106,6 +107,15 @@ app.post('/sendMessage', (req, res) => {
         });
     });
 });
+
+// Configurar CORS
+app.use(cors());  // Esto permitirá solicitudes desde cualquier origen
+
+// Para manejar datos POST (como los datos de registro)
+app.use(express.json());
+
+// Para servir archivos estáticos como el HTML, CSS y JS
+app.use(express.static('public'));
 
 // Arrancar el servidor
 app.listen(port, () => {
