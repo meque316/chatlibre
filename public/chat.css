@@ -158,3 +158,56 @@ footer {
     padding: 5px; /* Espaciado alrededor del texto */
     font-family: 'Arial', sans-serif; /* Fuente personalizada */
 }
+
+/* Ajustes para móviles */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Hace que el chat ocupe más espacio en móviles */
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .chat-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 10px;
+        left: 0;
+        top: 0;
+        position: relative;
+    }
+
+    #messages {
+        height: 60vh; /* Usa un porcentaje de la pantalla en lugar de un valor fijo */
+    }
+
+    /* Hacer que el panel de usuario se coloque abajo en móviles */
+    #user-panel {
+        position: fixed;
+        bottom: 10px;
+        right: 50%;
+        transform: translateX(50%);
+        width: 90%;
+        height: auto;
+        padding: 15px;
+        background: rgba(170, 27, 27, 0.8); /* Mayor opacidad */
+    }
+
+    #user-panel img {
+        width: 80px !important;
+        height: 80px !important;
+    }
+
+    #user-panel button {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    #message-input {
+        width: calc(100% - 20px);
+        margin: 5px;
+    }
+
+    #send-button {
+        width: 100%;
+    }
+}
