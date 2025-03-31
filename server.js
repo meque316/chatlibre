@@ -3,7 +3,11 @@ const path = require('path');
 const fs = require('fs');
 const cors = require('cors');  // Asegúrate de haber instalado cors
 const app = express();
-const port = 3000;
+const cors = require('cors');
+const port = process.env.PORT || 3000;  // Usa el puerto asignado por Render
+
+// Habilitar CORS para permitir solicitudes desde el frontend
+app.use(cors());
 
 // Para manejar datos POST (como los datos de registro)
 app.use(express.json());  // Permite recibir datos JSON en el cuerpo de la solicitud
@@ -121,5 +125,7 @@ app.use(express.static('public'));
 app.listen(port, () => {
     console.log(`Servidor corriendo en http://localhost:${port}`);
 });
+
+
 
 
