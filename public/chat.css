@@ -114,100 +114,42 @@ footer {
     top: 25px; /* Ajusta la distancia desde arriba */
     padding: 20px;
 }
-/* Estilo para el panel de usuario */
+/* Ajustes para el panel de usuario */
 #user-panel {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: rgba(170, 27, 27, 0.5);
-    color: rgb(26, 2, 2);
-    padding: 30px; /* Aumentar el padding para hacerlo más grande */
+    position: absolute;
+    top: 10px; /* Más cerca del borde superior */
+    left: 50%;
+    transform: translateX(-50%); /* Centrar en la parte superior */
+    background: rgba(170, 27, 27, 0.8); /* Hacerlo menos transparente */
+    color: rgb(255, 255, 255);
+    padding: 15px; /* Reducir el padding */
     border-radius: 10px;
     z-index: 20;
     display: flex;
-    flex-direction: column; /* Organiza los elementos en una columna */
-    align-items: center; /* Centra los elementos */
-    gap: 20px; /* Espaciado entre los elementos */
-    width: 250px; /* Aumentar el ancho del panel */
-    height: 300px; /* Aumentar la altura del panel */
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Menos espacio entre elementos */
+    width: 200px; /* Reducir el ancho */
+    height: auto; /* Altura ajustable según el contenido */
 }
 
-/* Estilo para los botones en el panel */
+/* Ajuste para la imagen del avatar */
+#user-panel img {
+    width: 80px !important; /* Reducir tamaño del avatar */
+    height: 80px !important;
+    border-radius: 50%;
+}
+
+/* Ajuste para el nombre de usuario */
+#user-panel #username-display {
+    font-size: 16px; /* Reducir el tamaño del texto */
+}
+
+/* Ajuste para los botones dentro del panel */
 #user-panel button {
     background-color: #33332f;
-    padding: 24px 40px; /* Aumentar el padding del botón */
+    padding: 8px 12px; /* Reducir el tamaño del botón */
     border-radius: 5px;
     cursor: pointer;
-    width: 100%; /* Hacer el botón ocupar todo el ancho del panel */
-    text-align: center; /* Centrar el texto del botón */
-    font-size: 25px; /* Aumentar el tamaño de la fuente del botón */
-}
-
-/* Estilo para la imagen del avatar */
-#user-panel img {
-    width: 150px !important; /* Aumentar el tamaño del avatar */
-    height: 150px !important; /* Aumentar el tamaño del avatar */
-    border-radius: 50%; /* Mantener el avatar redondeado */
-}
-/* Estilo para el nombre de usuario en el panel */
-#user-panel #username-display {
-    font-weight: bold;
-    color: rgb(20, 20, 20);
-    font-size: 22px; /* Aumentar el tamaño del texto */
-    margin-top: 10px; /* Espaciado superior */
-    padding: 5px; /* Espaciado alrededor del texto */
-    font-family: 'Arial', sans-serif; /* Fuente personalizada */
-}
-
-/* Ajustes para móviles */
-@media (max-width: 768px) {
-    .container {
-        width: 90%; /* Hace que el chat ocupe más espacio en móviles */
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    .chat-container {
-        width: 100%;
-        max-width: 100%;
-        padding: 10px;
-        left: 0;
-        top: 0;
-        position: relative;
-    }
-
-    #messages {
-        height: 60vh; /* Usa un porcentaje de la pantalla en lugar de un valor fijo */
-    }
-
-    /* Hacer que el panel de usuario se coloque abajo en móviles */
-    #user-panel {
-        position: fixed;
-        bottom: 10px;
-        right: 50%;
-        transform: translateX(50%);
-        width: 90%;
-        height: auto;
-        padding: 15px;
-        background: rgba(170, 27, 27, 0.8); /* Mayor opacidad */
-    }
-
-    #user-panel img {
-        width: 80px !important;
-        height: 80px !important;
-    }
-
-    #user-panel button {
-        font-size: 18px;
-        padding: 10px;
-    }
-
-    #message-input {
-        width: calc(100% - 20px);
-        margin: 5px;
-    }
-
-    #send-button {
-        width: 100%;
-    }
-}
+    width: 100%;
+    font-size: 14px; /* Tamaño de fuente más pequeño */
