@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>CHAT LIBRE - Registro</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Registro CHAT LIBRE</h1>
+        <form id="registerForm">
+            <div class="input-group">
+                <label for="firstName">Nombre:</label>
+                <input type="text" id="firstName" required>
+            </div>
+            <div class="input-group">
+                <label for="lastName">Apellido:</label>
+                <input type="text" id="lastName" required>
+            </div>
+            <div class="input-group">
+                <label for="newUsername">Nombre de usuario:</label>
+                <input type="text" id="newUsername" required minlength="3">
+            </div>
+            <div class="input-group">
+                <label for="newEmail">Correo:</label>
+                <input type="email" id="newEmail" required>
+            </div>
+            <div class="input-group">
+                <label for="newPassword">Contraseña:</label>
+                <input type="password" id="newPassword" required minlength="6">
+            </div>
+            <div class="input-group">
+                <label for="confirmPassword">Confirmar Contraseña:</label>
+                <input type="password" id="confirmPassword" required minlength="6">
+            </div>
+            <div class="error-message" id="register-error-message"></div>
+            <button type="submit">Crear cuenta</button>
+        </form>
+        <p>¿Ya tienes cuenta? <a href="index.html">Inicia sesión aquí</a></p>
+    </div>
+    <script src="register.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+[
+  {
+    "firstName": "nicolas",
+    "lastName": "alvarado",
+    "username": "meque316",
+    "email": "nico@correo.cl",
+    "password": "123456"
+  },
+  {
+    "firstName": "chico",
+    "lastName": "terry",
+    "username": "chicoterry666",
+    "email": "nico2@correo.cl",
+    "password": "123456"
+  },
+  {
+    "firstName": "chico",
+    "lastName": "terry",
+    "username": "chicoterry6666",
+    "email": "nico2@correo.cl",
+    "password": "123456"
+  },
+  {
+    "firstName": "chamaco",
+    "lastName": "valdez",
+    "username": "chamaco666",
+    "email": "chamaco@chamaco.cl",
+    "password": "123456"
+  },
+  {
+    "firstName": "caca",
+    "lastName": "caco",
+    "username": "caca3000",
+    "email": "caca@gmail.com",
+    "password": "123456"
+  }
+]

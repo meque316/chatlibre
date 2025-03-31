@@ -1,0 +1,160 @@
+/* General */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start; /* Alinea el chat a la izquierda */
+    align-items: center;
+    height: 100vh;
+    padding-left: 20px; /* Espacio desde el borde izquierdo */
+}
+
+.container {
+    width: 70%;
+    max-width: none; /* Para asegurarse de que no se limite el ancho */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Header */
+header {
+    background-color: #3498db;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.5em;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/* Mensajes */
+#messages {
+    padding: 20px;
+    height: 400px;
+    overflow-y: auto;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo para el mensaje */
+.message {
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 10px;
+    background-color: #3498db;
+    color: white;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+/* Mensajes del usuario */
+.message.user {
+    background-color: #2ecc71;
+    margin-left: auto;
+}
+
+/* Estilo para los nombres de usuario */
+.username {
+    font-weight: bold !important;
+    color: yellow !important;
+    display: block !important; /* Para que el nombre aparezca en una línea aparte */
+    margin-bottom: 3px !important;
+}
+
+/* Entrada de mensaje */
+#message-input {
+    width: calc(100% - 100px);
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Botón de enviar */
+#send-button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#send-button:hover {
+    background-color: #2980b9;
+}
+
+/* Footer */
+footer {
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-size: 0.9em;
+    color: #777;
+}
+
+.chat-container {
+    width: 70%; /* Define el ancho */
+    max-width: none; /* Elimina la restricción de tamaño */
+    margin: 50px 0; /* Elimina el centrado automático */
+    position: fixed;
+    left: 0; /* Mueve el chat completamente a la izquierda */
+    top: 25px; /* Ajusta la distancia desde arriba */
+    padding: 20px;
+}
+/* Estilo para el panel de usuario */
+#user-panel {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(170, 27, 27, 0.5);
+    color: rgb(26, 2, 2);
+    padding: 30px; /* Aumentar el padding para hacerlo más grande */
+    border-radius: 10px;
+    z-index: 20;
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en una columna */
+    align-items: center; /* Centra los elementos */
+    gap: 20px; /* Espaciado entre los elementos */
+    width: 250px; /* Aumentar el ancho del panel */
+    height: 300px; /* Aumentar la altura del panel */
+}
+
+/* Estilo para los botones en el panel */
+#user-panel button {
+    background-color: #33332f;
+    padding: 24px 40px; /* Aumentar el padding del botón */
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Hacer el botón ocupar todo el ancho del panel */
+    text-align: center; /* Centrar el texto del botón */
+    font-size: 25px; /* Aumentar el tamaño de la fuente del botón */
+}
+
+/* Estilo para la imagen del avatar */
+#user-panel img {
+    width: 150px !important; /* Aumentar el tamaño del avatar */
+    height: 150px !important; /* Aumentar el tamaño del avatar */
+    border-radius: 50%; /* Mantener el avatar redondeado */
+}
+/* Estilo para el nombre de usuario en el panel */
+#user-panel #username-display {
+    font-weight: bold;
+    color: rgb(20, 20, 20);
+    font-size: 22px; /* Aumentar el tamaño del texto */
+    margin-top: 10px; /* Espaciado superior */
+    padding: 5px; /* Espaciado alrededor del texto */
+    font-family: 'Arial', sans-serif; /* Fuente personalizada */
+}
