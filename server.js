@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const app = express();
+const cors = require('cors');
 const port = 3000;
 
 // Para manejar datos POST (como los datos de registro)
